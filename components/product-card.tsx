@@ -13,7 +13,11 @@ export function ProductCard(product: Product) {
 
 	return (
 		<div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-zinc-900 flex flex-col">
-			<div className="aspect-square w-full relative bg-white border border-zinc-300 rounded-t-lg">
+			<Link
+				className="aspect-square w-full relative bg-white border border-zinc-300 rounded-t-lg"
+				href={url.toString()}
+				scroll={false}
+			>
 				<Image
 					alt="Product image"
 					className="object-contain py-4"
@@ -22,7 +26,7 @@ export function ProductCard(product: Product) {
 					priority={true}
 					loading="eager"
 				/>
-			</div>
+			</Link>
 			<div className="px-6 py-4 space-y-4 flex-grow relative flex flex-col">
 				<div className="font-bold text-white text-xl">
 					{product.title.substring(0, 25)}...
