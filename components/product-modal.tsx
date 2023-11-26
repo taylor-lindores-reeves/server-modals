@@ -9,7 +9,11 @@ import { Product } from "@/app/products/page";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
-export const ProductModal = async ({ id }: { id?: string }) => {
+interface ProductModalProps {
+	id?: string;
+}
+
+export const ProductModal = async ({ id }: ProductModalProps) => {
 	if (!id || isNaN(parseInt(id, 10))) {
 		redirect("/products");
 	}
@@ -18,21 +22,18 @@ export const ProductModal = async ({ id }: { id?: string }) => {
 	const product = (await response.json()) as Product;
 
 	return (
-		<Card
-			className={cn(
-				"fixed inset-0 flex items-center justify-center z-10 opacity-0 transition-opacity duration-500",
-				product && "opacity-100"
-			)}
-		>
+		<Card className="fixed inset-0 flex items-center justify-center z-10">
 			<Link
-				href="/products"
 				className="fixed inset-0 bg-black opacity-75 cursor-default"
+				href="/products"
+				scroll={false}
 			/>
 			<div className="relative w-full max-w-3xl bg-white rounded-md shadow-md">
 				<div className="flex justify-between items-start">
 					<Link
 						className="absolute top-2.5 right-2.5 h-6 w-6 bg-black text-white rounded justify-center items-center flex pb-0.5"
 						href="/products"
+						scroll={false}
 					>
 						&times;
 						<span className="sr-only">Close Modal</span>

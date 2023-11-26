@@ -45,6 +45,7 @@ export function ProductCard(product: Product) {
 					<Link
 						className="justify-center flex text-center w-full border rounded px-3 py-2 text-white hover:bg-white transition-colors duration-300 hover:text-zinc-900 border-zinc-300 hover:border-zinc-900"
 						href={url.toString()}
+						scroll={false}
 					>
 						View More
 					</Link>

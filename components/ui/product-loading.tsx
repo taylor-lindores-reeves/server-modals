@@ -4,16 +4,18 @@ import Link from "next/link";
 
 export const ProductLoading = () => {
 	return (
-		<Card className="fixed inset-0 flex items-center justify-center z-10">
+		<Card className="fixed inset-0 flex items-center justify-center z-10 animate-fadeIn">
 			<Link
-				href="/products"
 				className="fixed inset-0 bg-black opacity-75 cursor-default"
+				href="/products"
+				scroll={false}
 			/>
 			<div className="relative w-full max-w-3xl bg-white rounded-md shadow-md">
 				<div className="flex justify-between items-start">
 					<Link
 						className="absolute top-2.5 right-2.5 h-6 w-6 bg-black text-white rounded justify-center items-center flex pb-0.5"
 						href="/products"
+						scroll={false}
 					>
 						&times;
 						<span className="sr-only">Close Modal</span>
