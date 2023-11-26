@@ -1,5 +1,4 @@
 import { ProductLayout } from "@/components/layouts/product-layout";
-import React, { Fragment } from "react";
 
 const Loading = () => {
 	return (

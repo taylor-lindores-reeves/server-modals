@@ -6,8 +6,6 @@ import { redirect } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import { PRODUCT_API } from "@/lib/constants";
 import { Product } from "@/app/products/page";
-import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
 
 interface ProductModalProps {
 	id?: string;
@@ -69,13 +67,9 @@ export const ProductModal = async ({ id }: ProductModalProps) => {
 					</div>
 				</div>
 				<div className="pb-3 px-3">
-					<Button
-						variant="secondary"
-						size="lg"
-						className="bg-secondary justify-center flex text-center w-full border rounded px-3 py-2 text-white hover:bg-white transition-colors duration-300 hover:text-zinc-900 border-zinc-300 hover:border-zinc-900"
-					>
+					<button className="h-11 bg-secondary text-secondary-foreground hover:bg-secondary/80 justify-center flex text-center w-full border rounded py-2 text-white hover:bg-white transition-colors duration-300 hover:text-zinc-900 border-zinc-300 hover:border-zinc-900">
 						Buy Now
-					</Button>
+					</button>
 				</div>
 			</div>
 		</Card>

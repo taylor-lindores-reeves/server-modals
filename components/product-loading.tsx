@@ -1,6 +1,7 @@
 import React from "react";
-import { Card } from "./card";
 import Link from "next/link";
+
+import { Card } from "./ui/card";
 
 export const ProductLoading = () => {
 	return (

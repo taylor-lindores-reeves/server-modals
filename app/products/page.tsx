@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { ProductModal } from "@/components/product-modal";
 import { ProductCard } from "@/components/product-card";
 import { ProductLayout } from "@/components/layouts/product-layout";
-import { ProductLoading } from "@/components/ui/product-loading";
+import { ProductLoading } from "@/components/product-loading";
 import { PRODUCT_API } from "@/lib/constants";
 
 export type Props = {

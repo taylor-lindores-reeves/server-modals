@@ -1,7 +1,8 @@
-import { Product } from "@/app/products/page";
-import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
+import { headers } from "next/headers";
+
+import { Product } from "@/app/products/page";
 
 export function ProductCard(product: Product) {
 	const headersList = headers();
